@@ -35,4 +35,16 @@ public class StringUtils {
     public boolean isBlack(String str) {
         return false;
     }
+
+    public boolean isNumber(String str){
+        if(isNull(str)) return false;
+        try{
+            Double.parseDouble(str);
+            return true;
+        }catch (NumberFormatException ex){
+            return false;
+        }
+    }
+
+
 }
